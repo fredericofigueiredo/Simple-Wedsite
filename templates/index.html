@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>This is my first website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>My name is Frederico, I'm 25 years old and I live in Munich, Germany. I am originaly from Portugal, I've
+                lived in 4 countries throughout my life and I've visited 22, 21 of each have been in Europe. I have a
+                lovely family, an incredible group of friends and a smart and beautiful girlfriend who I love dearly. I
+                love life!</p>
+        </section>
+
+        <section>
+            <h2>Services</h2>
+            <p>I'm currently focused in Automation and Software Development, I've been working at Amazon for 2 years.
+                I'm now getting deeper into software development and for that I'm practicing how to create this website.
+            </p>
+            <p>I am working as a Product Manager, I am proficient in python programming, which I combine with AWS
+                knowledge to plan, design and develop scalable and robust products. Visit <a
+                    href="https://github.com/fredericofigueiredo">my GitHub</a> to see some of my projects.</p>
+        </section>
+
+        <section>
+            <h2>My work</h2>
+            <div class="gallery">
+                <img src="C:/Users/fredadf/Desktop/Personal/Dev/Simple Wedbsite/media/SPACE.png"
+                    alt="Team Logo - Designed by me">
+            </div>
+        </section>
+
+        <section>
+            <h2>Reach out to me!</h2>
+            <form action="/submit" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <input type="submit" value="Submit">
+        </section>
+
+        <div id="successMessage" style="display: none;"></div>
+
+        <div id="memeContainer"></div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Frederico Figueiredo</p>
+    </footer>
+
+    <script>
+        // JavaScript code goes here
+        // Form Validation
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (event) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name === '' || email === '' || message === '') {
+                event.preventDefault();
+                alert('Please fill in all fields');
+            }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
