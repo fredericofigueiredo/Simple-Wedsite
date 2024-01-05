@@ -1,51 +1,42 @@
-from flask import Flask, render_template, request
-import requests
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Route to render the HTML form
 
-
+#Base URL
 @app.route('/')
-def index():
+def home():
     return render_template('index.html')
 
 
-# Route to handle the form submission
-@app.route('/submit', methods=['POST'])
-def submit():
-    if request.method == 'POST':
-        # Get the form data
-        name = request.form['name']
-        email = request.form['email']
-        message = request.form['message']
+#Subpages
+@app.route('/home/')
+def index():
+    return render_template('index.html')
 
-        # Save the form data to a database or file
-        print(f"Name: {name}, Email: {email}, Message: {message}")
+@app.route('/about/')
+def about():
+    return render_template('about.html')
 
-        # Return a success message
-        response_message ='Form submitted successfully!'
+@app.route('/projects/')
+def projects():
+    return render_template('projects.html')
 
-        meme_url = generate_meme(message)
-        
-        return jsonify({"message": response_message, "meme_url": meme_url})
+@app.route('/resume/')
+def resume():
+    return render_template('resume.html')
 
+@app.route('/content/')
+def content():
+    return render_template('content.html')
 
-def generate_meme(text):
-    
-    url = "https://ronreiter-meme-generator.p.rapidapi.com/meme"
+@app.route('/motd/')
+def meme():
+    return render_template('meme.html')
 
-    querystring = {"meme":"TBD","bottom":"TBD","top":"TBD","font":"Impact","font_size":"50"}
-
-    headers = {
-        "X-RapidAPI-Key": "0ada951614mshebf9bd422035583p1eb42djsn394e9bfa58d0",
-        "X-RapidAPI-Host": "ronreiter-meme-generator.p.rapidapi.com"
-    }
-
-    response = requests.get(url, headers=headers, params=querystring)
-
-
-    return response.json()
+@app.route('/contact/')
+def contact():
+    return render_template('contact.html')
 
 
 if __name__ == '__main__':

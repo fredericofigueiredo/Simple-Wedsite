@@ -3,18 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>This is my first website</title>
+    <title> Fred's Corner </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
 <body>
 
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Fred's Corner</h1>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Content</a></li>
+                <li><a href="#">Meme of the day</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -39,57 +42,12 @@
                     href="https://github.com/fredericofigueiredo">my GitHub</a> to see some of my projects.</p>
         </section>
 
-        <section>
-            <h2>My work</h2>
-            <div class="gallery">
-                <img src="C:/Users/fredadf/Desktop/Personal/Dev/Simple Wedbsite/media/SPACE.png"
-                    alt="Team Logo - Designed by me">
-            </div>
-        </section>
-
-        <section>
-            <h2>Reach out to me!</h2>
-            <form action="/submit" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
-                <input type="submit" value="Submit">
-        </section>
-
-        <div id="successMessage" style="display: none;"></div>
-
-        <div id="memeContainer"></div>
-
     </main>
 
     <footer>
-        <p>&copy; 2023 Frederico Figueiredo</p>
+        <p>&copy; 2023 Fred </p>
     </footer>
 
-    <script>
-        // JavaScript code goes here
-        // Form Validation
-        const form = document.querySelector('form');
-        form.addEventListener('submit', function (event) {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            if (name === '' || email === '' || message === '') {
-                event.preventDefault();
-                alert('Please fill in all fields');
-            }
-        });
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
