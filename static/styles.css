@@ -23,9 +23,10 @@ li {
 
 /* Global styles */
 h1 {
-    color: #f38c5f;
-    font-size: 40px;
+    color: #cb2743;
+    font-size: 60px;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 2px #ff583d;
 }
 
 h2 {
@@ -46,14 +47,17 @@ body {
     line-height: 1.6;
     background-color: #2d112a;
     color: #fbdccc;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 header {
-    background: url('../media/FireHouse.png');
+    background: url('https://preview.redd.it/w8uxn0c9m4tz.png?auto=webp&s=58083c350d1930d1c6072d8dd285eb0cc9c9c786');
+    /* '../media/FireHouse.png' */
+    background-size: cover;
     color: #f38c5f;
     padding: 20px;
     text-align: center;
+    margin: 0 20px;
 }
 
 
@@ -90,7 +94,6 @@ li {
     display: inline;
     margin-right: 10px;
     color: #f38c5f;
-    /* Optional: adds some space between the buttons */
 }
 
 
@@ -103,4 +106,11 @@ li a {
 li a:hover {
     color: #e0433e;
     text-decoration: none;
+}
+
+/* Add margins to other elements as needed */
+main,
+footer,
+nav {
+    margin: 0 20px;
 }
