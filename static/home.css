@@ -108,6 +108,18 @@ header h1 {
     text-shadow: 2px 2px 2px #ff583d;
 }
 
+header h1 a {
+    color: inherit;
+    /* Keeps the color of the h1 */
+    text-decoration: none;
+    /* Removes the underline */
+}
+
+header h1 a:hover {
+    color: inherit;
+    /* Keeps the color of the h1 even when hovered */
+}
+
 
 
 
