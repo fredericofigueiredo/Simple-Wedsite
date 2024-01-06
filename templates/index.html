@@ -4,50 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <title> Fred's Corner </title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 </head>
 
 <body>
 
-    <header>
-        <h1>Fred's Corner</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Content</a></li>
-                <li><a href="#">Meme of the day</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Fred's Corner</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Content</a></li>
+                    <li><a href="#">Meme of the day</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>My name is Frederico, I'm 25 years old and I live in Munich, Germany. I am originaly from Portugal, I've
-                lived in 4 countries throughout my life and I've visited 22, 21 of each have been in Europe. I have a
-                lovely family, an incredible group of friends and a smart and beautiful girlfriend who I love dearly. I
-                love life!</p>
-        </section>
+        <main>
+            <section>
+                <h2>About Me</h2>
+                <p>My name is Frederico, I'm 25 years old and I live in Munich, Germany. I am originaly from Portugal,
+                    I've lived in 4 countries throughout my life and I've visited 22, 21 of each have been in Europe. I
+                    have a lovely family, an incredible group of friends and a smart and beautiful girlfriend who I love
+                    dearly. I love life!</p>
+            </section>
 
-        <section>
-            <h2>Services</h2>
-            <p>I'm currently focused in Automation and Software Development, I've been working at Amazon for 2 years.
-                I'm now getting deeper into software development and for that I'm practicing how to create this website.
-            </p>
-            <p>I am working as a Product Manager, I am proficient in python programming, which I combine with AWS
-                knowledge to plan, design and develop scalable and robust products. Visit <a
-                    href="https://github.com/fredericofigueiredo">my GitHub</a> to see some of my projects.</p>
-        </section>
+            <section>
+                <h2>Services</h2>
+                <p>I'm currently focused in Automation and Software Development, I've been working at Amazon for 2
+                    years.
+                    I'm now getting deeper into software development and for that I'm practicing how to create this
+                    website.
+                </p>
+                <p>I am working as a Product Manager, I am proficient in python programming, which I combine with AWS
+                    knowledge to plan, design and develop scalable and robust products. Visit <a
+                        href="https://github.com/fredericofigueiredo">my GitHub</a> to see some of my projects.</p>
+            </section>
 
-    </main>
+        </main>
 
-    <footer>
-        <p>&copy; 2023 Fred </p>
-    </footer>
+        <footer>
+            <p>&copy; Fred 2024 </p>
+        </footer>
+
+    </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 

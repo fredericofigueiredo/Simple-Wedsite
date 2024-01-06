@@ -1,0 +1,200 @@
+/* Resetting default browser styles */
+body,
+h1,
+h2,
+h3,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/*colors
+#fbdccc
+#e0433e
+#2d112a
+#7b0432
+#540432
+#f38c5f
+#f1846c
+#54043c
+#942444
+*/
+
+/* Global styles */
+h1 {
+    color: #cb2743;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #f38c5f;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #f38c5f;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Body Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: url('https://preview.redd.it/w8uxn0c9m4tz.png?auto=webp&s=58083c350d1930d1c6072d8dd285eb0cc9c9c786') no-repeat;
+    background-size: 100% auto;
+    /*background-position: center 40px;*/
+    /* Adjust the second value as needed */
+    background-color: #2d112a;
+    color: #fbdccc;
+    margin: 20px 0;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    /* Start from where the image ends */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2d112a;
+}
+
+
+/* Header Styles */
+
+header {
+    position: relative;
+    background: transparent;
+    color: #f38c5f;
+    padding: 20px;
+    padding-top: 100px;
+    /* Adjust this value as needed */
+    text-align: center;
+    margin: 0 20px;
+}
+
+header h1::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 245px;
+    right: 0;
+    /* Change from right to left */
+    width: 20px;
+    /* Adjust this value as needed */
+    height: 26px;
+    /* Adjust this value as needed */
+    border-right: 3px solid #530030;
+    /* Change from border-right to border-left */
+    border-top: 2px solid #530030;
+    /* Adjust the color as needed */
+}
+
+header h1 {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 2px #ff583d;
+}
+
+
+
+
+/* Main Styles */
+
+
+main {
+    padding: 20px;
+}
+
+/* Navigation */
+nav {
+    background-color: #530030;
+    color: #f38c5f;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #530030;
+    color: #f38c5f;
+    border-radius: 5px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: inline;
+    margin-right: 10px;
+    color: #f38c5f;
+}
+
+
+li a {
+    color: #fbdccc;
+    text-decoration: none;
+    padding: 7px;
+}
+
+li a:hover {
+    color: #e0433e;
+    text-decoration: none;
+}
+
+a {
+    color: #ffdcc8;
+    /* Replace with your desired color */
+}
+
+a:hover {
+    color: #e0433e;
+    /* Replace with your desired color */
+}
+
+
+
+/* Article Styles */
+
+/* Add margins to other elements as needed */
+main,
+footer,
+nav {
+    margin: 0 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+header,
+main,
+footer {
+    width: 80%;
+    /* Adjust this value as needed */
+    margin: 0 auto;
+    /* Add this line to center these elements */
+}
