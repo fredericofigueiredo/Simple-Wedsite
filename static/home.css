@@ -202,6 +202,63 @@ nav {
     width: 100%;
 }
 
+.box {
+    transition: transform 0.3s ease-in-out;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(81, 2, 48, 0.8);
+    /* white with 80% opacity */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    flex: 0 0 48%;
+    /* boxes take up 48% of the container width */
+    /* other styles */
+    width: calc(50% - 10px);
+    /* boxes take up nearly half of the container width */
+    box-sizing: border-box;
+    /* include padding and border in the box's width */
+    /* other styles */
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.box:hover {
+    transform: scale(1.02);
+}
+
+.see-more {
+    background-color: #008CBA;
+    /* blue */
+    color: white;
+    /* white text */
+    border: none;
+    /* no border */
+    padding: 5px 10px;
+    /* padding around the text */
+    text-align: center;
+    /* center the text */
+    text-decoration: none;
+    /* remove underline */
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    /* change cursor to pointer when hovering over the button */
+}
+
+.hide-text {
+    display: none;
+}
+
+.full-width {
+    width: 100%;
+}
+
 header,
 main,
 footer {
@@ -209,4 +266,28 @@ footer {
     /* Adjust this value as needed */
     margin: 0 auto;
     /* Add this line to center these elements */
+}
+
+#interests-heading {
+    color: #2d112a;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .box {
+        width: 100%;
+    }
+
+    .hide-text {
+        display: none;
+    }
+
+    .see-more {
+        display: inline;
+        margin-left: auto;
+    }
 }

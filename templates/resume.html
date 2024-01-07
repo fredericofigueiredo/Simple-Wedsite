@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Resume - Fred's Corner </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <a href="/home" style="text-decoration: none; color: inherit;">
+            <h1>Fred's Corner</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/resume">Resume</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/content">Content</a></li>
+                <li><a href="/meme">Meme of the day</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="Interests">
+            <h2 id="interests-heading">Intro</h2>
+            <div class="box full-width">
+                <h3>Summary</h3>
+                <p>My name is Frederico, I'm 25 years old and I live in Munich, Germany. I am originaly from Portugal,
+                    I've
+                    lived in 4 countries throughout my life and I've visited 22, 21 of each have been in Europe. I have
+                    a
+                    lovely family, an incredible group of friends and a smart and beautiful girlfriend who I love
+                    dearly. I
+                    love life!</p>
+                <h3>Interests</h3>
+
+            </div>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="box-container">
+                <div class="box">
+
+                    <h3>Software Developer at XYZ Company</h3>
+                    <p>January 2020 - Present</p>
+
+                    <p>Developed and maintained web applications using JavaScript, HTML, and CSS.<span
+                            class="more hide-text">Collaborated with a team of developers to design user-friendly
+                            interfaces. Implemented responsive design for mobile and tablet users.</span></p>
+
+                    <button class="see-more">See more</button>
+                </div>
+
+                <div class="box">
+
+                    <h3>Software Developer at XYZ Company</h3>
+                    <p>January 2020 - Present</p>
+
+                    <p>Developed and maintained web applications using JavaScript, HTML, and CSS.<span
+                            class="more hide-text">Collaborated with a team of developers to design user-friendly
+                            interfaces. Implemented responsive design for mobile and tablet users.</span></p>
+
+                    <button class="see-more">See more</button>
+                </div>
+            </div>
+
+            <div class="box-container">
+                <div class="box">
+                    <h3>Test 3</h3>
+                    <p>January 2020 - Present</p>
+                    <ul>
+                        <p>Developed and maintained web applications using JavaScript, HTML, and CSS.<span
+                                class="more hide-text">Collaborated with a team of developers to design user-friendly
+                                interfaces. Implemented responsive design for mobile and tablet users.</span></p>
+
+                    </ul>
+                    <button class="see-more">See more</button>
+                </div>
+                <div class="box">
+                    <h3>Test 4</h3>
+                    <p>January 2020 - Present</p>
+                    <ul>
+                        <li>Developed and maintained web applications using JavaScript, HTML, and CSS.</li>
+                        <p>Developed and maintained web applications using JavaScript, HTML, and CSS.<span
+                                class="more hide-text">Collaborated with a team of developers to design user-friendly
+                                interfaces. Implemented responsive design for mobile and tablet users.</span></p>
+
+                    </ul>
+                    <button class="see-more">See more</button>
+                </div>
+            </div>
+            <!-- Add more experiences here -->
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="box-container">
+                <div class="box">
+                    <h3>Masters of Science in Computer Science</h3>
+                    <p>XYZ University, 2016 - 2020</p>
+                </div>
+                <div class="box">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <p>XYZ University, 2016 - 2020</p>
+                </div>
+            </div>
+
+            <!-- Add more education here -->
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+                <li>Python</li>
+                <!-- Add more skills here -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Fred </p>
+    </footer>
+
+
+
+    <script>
+        document.querySelectorAll('.see-more').forEach(button => {
+            button.addEventListener('click', () => {
+                const moreText = button.previousElementSibling.querySelector('.more');
+                moreText.classList.remove('hide-text');
+                button.style.display = 'none';
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
