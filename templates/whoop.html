@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Fred's Corner - Home </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <a href="/home" style="text-decoration: none; color: inherit;">
+            <h1>Fred's Corner</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/resume">Resume</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/content">Content</a></li>
+                <li><a href="/meme">Meme of the day</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2 id="interests-heading">Whoop</h2>
+            <div class="box-container">
+                <div class="box">
+                    <h2>Recovery</h2>
+                    <h3>{{whoop_recovery}}</h3>
+                    <p>Recovery is the most important part of training. If you don't recover properly, you won't be
+                        able to train as hard as you want to. Whoop is a great tool to track your recovery and make sure
+                        you're not overtraining.</p>
+                </div>
+                <div class="box">
+                    <h2>Sleep</h2>
+                    <h3>{{whoop_sleep}}</h3>
+                    <p>Sleep is the most important part of recovery. Whoop tracks your sleep and gives you a sleep
+                        score. It also tells you how much sleep you need to get to be fully recovered.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
